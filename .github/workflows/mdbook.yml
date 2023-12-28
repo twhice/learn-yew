@@ -35,7 +35,7 @@ jobs:
         run: |
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
-          cargo install --lock trunk mdbook
+          cargo install --locked trunk
       - name: 初始化Pages
         id: pages
         uses: actions/configure-pages@v4
