@@ -39,7 +39,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: 依赖
-        run: rustup target add wasm32-unknown-unknown
+        run: rustup target add wasm32-unknown-unknown;
           cargo install --locked trunk
       - name: 构建页面
         run: trunk build --release
