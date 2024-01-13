@@ -40,7 +40,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: 构建页面
-        run: mdbook build
+        run: trunk build --release
       - name: 上传
         uses: actions/upload-pages-artifact@v3
         with:
