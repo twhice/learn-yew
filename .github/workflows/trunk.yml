@@ -43,6 +43,8 @@ jobs:
           cargo install --locked trunk
       - name: 构建页面
         run: trunk build --release
+      - name: 更改base
+        run: sed -i 's/<html lang=en>/<html lang=en><base href="\/learn-yew\/" \/>/g' dist/index.html
       - name: 上传
         uses: actions/upload-pages-artifact@v3
         with:
